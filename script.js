@@ -8,15 +8,8 @@ function toggleDarkMode(){
     } else {
         localStorage.setItem("theme","light")
     }
-
-
-    // if (!nav.classList.contains("dark")){
-    //     nav.classList.add("dark")
-    // } else{
-    //     nav.classList.remove("dark")
-    // }
-
 }
+
 
 if (localStorage.getItem("theme") == "light") {
     nav.classList.remove("dark");
@@ -29,11 +22,11 @@ if (localStorage.getItem("theme") == "light") {
 }
 
 const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-    
-    mobileMenuButton.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
+const mobileMenu = document.getElementById('mobile-menu');
+
+mobileMenuButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+});
 
 // Highlight active link
 const currentPage = window.location.pathname.split("/").pop(); // e.g. 'about.html'
