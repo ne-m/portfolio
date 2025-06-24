@@ -19,65 +19,64 @@
 </head>
 <body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white font-sans h-screen">
 
-  <nav class="bg-white shadow-lg " id="nav">
-    <div class="max-w-6xl mx-auto px-4">
-        <div class="flex justify-between">
-             <div class="flex space-x-6">
-                <a href="#" class="flex items-center py-4 px-2">
-                    <span class="font-semibold text-gray-500 dark:text-gray-300 text-lg font-title">MyPortfolio</span>
-                </a>
-            </div>
-            <div class="hidden md:flex items-center space-x-1">
-                <a href="index.html" class="nav-link py-1 px-2 text-lg font-semibold text-gray-900 hover:green">Home</a>
-                <a href="projects.html" class="nav-link py-1 px-2 text-lg font-semibold text-gray-900 hover:green">Projects</a>
-                <a href="about.html" class="nav-link py-1 px-2 text-lg font-semibold text-gray-900 hover:green">About</a>
-                <a href="contact.html" class="nav-link py-1 px-2 text-lg font-semibold text-gray-900 hover:green">Contact</a>
-                
-            </div>
-            <div class="toggler hidden md:flex items-center space-x-1">
-                <p class="text-base toggler--light">Light</p>
-                <div class="toggler--slider" onclick="toggleDarkMode()">
-                <div class="toggler--slider--circle"></div>
+    <nav class="bg-white shadow-lg " id="nav">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-6">
+                    <a href="#" class="flex items-center py-4 px-2">
+                        <span class="font-semibold text-gray-500 dark:text-gray-300 text-lg font-title">MyPortfolio</span>
+                    </a>
                 </div>
-                <p class="text-base toggler--dark">Dark</p>
-            </div>
-
-            <div class="md:hidden flex items-center">
-                <button id="mobile-menu-button" class="outline-none mobile-menu-button">
-                <svg class="w-6 h-6 text-gray-500 dark:text-gray-300" 
-                        x-show="!showMenu"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor">
-                    <path d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-                </button>
-            </div>
-
-        </div>
-    </div>
-  
-    <div id="mobile-menu" class="hidden md:hidden">
-        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a href="index.html"  class="nav-link block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-green-500 dark:hover:text-green-400">Home</a>
-            <a href="projects.html" class="nav-link block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-green-500 dark:hover:text-green-400">Projects</a>
-            <a href="about.html"  class="nav-link block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-green-500 dark:hover:text-green-400">About</a>
-            <a href="contact.html" class="nav-link block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-green-500 dark:hover:text-green-400">Contact</a>
-            <div class="toggler px-3 pt-2">
-                <p class="toggler--light">Light</p>
-                <div class="toggler--slider" onclick="toggleDarkMode()">
-                <div class="toggler--slider--circle"></div>
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="index.html" class="nav-link py-1 px-2 text-lg font-semibold text-gray-900 hover:green">Home</a>
+                    <a href="projects.html" class="nav-link py-1 px-2 text-lg font-semibold text-gray-900 hover:green">Projects</a>
+                    <a href="about.html" class="nav-link py-1 px-2 text-lg font-semibold text-gray-900 hover:green">About</a>
+                    <a href="contact.html" class="nav-link py-1 px-2 text-lg font-semibold text-gray-900 hover:green">Contact</a>
                 </div>
-                <p class="toggler--dark">Dark</p>
+                <div class="toggler hidden md:flex items-center space-x-1">
+                    <p class="text-base toggler--light">Light</p>
+                    <div class="toggler--slider" onclick="toggleDarkMode()">
+                    <div class="toggler--slider--circle"></div>
+                    </div>
+                    <p class="text-base toggler--dark">Dark</p>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="outline-none mobile-menu-button">
+                    <svg class="w-6 h-6 text-gray-500 dark:text-gray-300" 
+                            x-show="!showMenu"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                        <path d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    </button>
+                </div>
+
             </div>
         </div>
-        
-    </div>
 
-  </nav>
+        <div id="mobile-menu" class="hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html"  class="nav-link block px-3 py-2 text-base font-medium text-gray-900 hover:text-green-500 ">Home</a>
+                <a href="projects.html" class="nav-link block px-3 py-2 text-base font-medium text-gray-900 hover:text-green-500 ">Projects</a>
+                <a href="about.html"  class="nav-link block px-3 py-2 text-base font-medium text-gray-900 hover:text-green-500 ">About</a>
+                <a href="contact.html" class="nav-link block px-3 py-2 text-base font-medium text-gray-900 hover:text-green-500 ">Contact</a>
+                <div class="toggler px-3 pt-2">
+                    <p class="toggler--light">Light</p>
+                    <div class="toggler--slider" onclick="toggleDarkMode()">
+                    <div class="toggler--slider--circle"></div>
+                    </div>
+                    <p class="toggler--dark">Dark</p>
+                </div>
+            </div>
+            
+        </div>
+
+    </nav>
 
     <main class="bg-gray-100 ">
         <section id="hero" class="text-center py-20" >
