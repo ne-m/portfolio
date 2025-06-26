@@ -14,85 +14,78 @@
         
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="tailwind.config.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
-<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white font-sans h-screen">
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white h-screen">
 
-    <nav class="bg-white shadow-lg " id="nav">
+    <nav class="fixed top-0 left-0 w-full z-50 bg-white dark:bg-gray-900 shadow-lg transition-colors duration-300" id="nav">
         <div class="max-w-6xl mx-auto px-4">
-            <div class="flex justify-between">
+            <div class="flex justify-between items-center py-3">
                 <div class="flex space-x-6">
-                    <a href="#" class="flex items-center py-4 px-2">
-                        <span class="font-semibold text-gray-900 text-lg font-title">MyPortfolio</span>
+                    <a href="#" class="flex items-center py-2 px-2">
+                    <span class="nav-link py-1 px-2 text-lg font-semibold text-gray-900 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400">MY PORTFOLIO</span>
                     </a>
                 </div>
+
+                <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-1">
-                    <a href="index.html" class="nav-link py-1 px-2 text-lg font-semibold text-gray-900 hover:green">Home</a>
-                    <a href="projects.html" class="nav-link py-1 px-2 text-lg font-semibold text-gray-900 hover:green">Projects</a>
-                    <a href="about.html" class="nav-link py-1 px-2 text-lg font-semibold text-gray-900 hover:green">About</a>
-                    <a href="contact.html" class="nav-link py-1 px-2 text-lg font-semibold text-gray-900 hover:green">Contact</a>
+                    <a href="index.html" class="nav-link py-1 px-2 text-xl font-semibold text-gray-900 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400">Home</a>
+                    <a href="projects.html" class="nav-link py-1 px-2 text-xl font-semibold text-gray-900 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400">Projects</a>
+                    <a href="about.html" class="nav-link py-1 px-2 text-xl font-semibold text-gray-900 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400">About</a>
+                    <a href="contact.html" class="nav-link py-1 px-2 text-xl font-semibold text-gray-900 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400">Contact</a>
                 </div>
+
                 <div class="toggler hidden md:flex items-center space-x-1">
-                    <p class="text-base toggler--light">Light</p>
+                    <p class="text-base text-lg toggler--light ">Light</p>
                     <div class="toggler--slider" onclick="toggleDarkMode()">
                     <div class="toggler--slider--circle"></div>
                     </div>
-                    <p class="text-base toggler--dark">Dark</p>
+                    <p class="text-base text-lg toggler--dark">Dark</p>
                 </div>
 
+                <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-button" class="outline-none mobile-menu-button">
-                    <svg class="w-6 h-6 text-gray-500 dark:text-gray-300" 
-                            x-show="!showMenu"
-                            fill="none"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor">
-                        <path d="M4 6h16M4 12h16M4 18h16"></path>
+                    <button id="mobile-menu-button" class="text-gray-700 dark:text-gray-300">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
                     </svg>
                     </button>
                 </div>
-
             </div>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="index.html"  class="nav-link block px-3 py-2 text-base font-medium text-gray-900 hover:text-green-500 ">Home</a>
-                <a href="projects.html" class="nav-link block px-3 py-2 text-base font-medium text-gray-900 hover:text-green-500 ">Projects</a>
-                <a href="about.html"  class="nav-link block px-3 py-2 text-base font-medium text-gray-900 hover:text-green-500 ">About</a>
-                <a href="contact.html" class="nav-link block px-3 py-2 text-base font-medium text-gray-900 hover:text-green-500 ">Contact</a>
-                <div class="toggler px-3 pt-2">
-                    <p class="toggler--light">Light</p>
-                    <div class="toggler--slider" onclick="toggleDarkMode()">
-                    <div class="toggler--slider--circle"></div>
-                    </div>
-                    <p class="toggler--dark">Dark</p>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden bg-white dark:bg-gray-900 shadow-lg w-full transition-colors duration-300 md:hidden px-4 pb-4 space-y-2">
+            <a href="index.html" class="block px-3 py-2 text-base text-lg font-medium text-gray-900 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400">Home</a>
+            <a href="projects.html" class="block px-3 py-2 text-base text-lg font-medium text-gray-900 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400">Projects</a>
+            <a href="about.html" class="block px-3 py-2 text-base text-lg font-medium text-gray-900 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400">About</a>
+            <a href="contact.html" class="block px-3 py-2 text-base text-lg font-medium text-gray-900 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400">Contact</a>
+            <div class="toggler px-3 md:flex items-center space-x-1">
+                <p class="text-base text-lg toggler--light ">Light</p>
+                <div class="toggler--slider" onclick="toggleDarkMode()">
+                <div class="toggler--slider--circle"></div>
                 </div>
+                <p class="text-base text-lg toggler--dark">Dark</p>
             </div>
-            
         </div>
-
     </nav>
 
-    <main class="bg-gray-100 ">
+    <main class="bg-gray-100 dark:bg-gray-800 pt-20">
         <section id="hero" class="text-center py-20" >
             <!-- <img src="banner.jpg" alt="" class="absolute inset-0 w-full h-full object-cover opacity-50 dark:opacity-20"> -->
             <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32" data-aos="zoom-out">
                 <div class="flex justify-center">
                     <div class="w-full lg:w-9/12 text-center">
-                        <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-4">Welcome</h2>
+                        <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-4 dark:text-white">Welcome</h2>
                         
-                        <p class="text-xl md:text-2xl text-gray-600 mb-6">
+                        <p class="text-xl md:text-2xl text-gray-600 mb-6 dark:text-gray-300 ">
                         Hi there, I'm Emmanuel, a curious individual whose not a afraid to ask big WH questions:  
-                        <span class="typed text-blue-600 font-medium" data-typed-items="Why, What, How, When, Where ">Why</span>
+                        <span class="typed text-blue-600 font-medium dark:text-blue-400" data-typed-items="Why, What, How, When, Where "></span>
                         
                         </p>
-                        <p class="text-xl md:text-2xl text-gray-600">Click the link below to find out more about me 🙂</p>
-                        <a href="about.html" class="mt-6 inline-block bg-white text-blue-600 px-6 py-2 rounded shadow hover:bg-gray-200">More about me</a>                    
+                        <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300">Click the link below to find out more about me 🙂</p>
+                        <a href="about.html" class="mt-6 inline-block bg-white text-blue-600 px-6 py-2 rounded shadow hover:bg-gray-200 dark:bg-blue-600 dark:text-white">More about me</a>                    
                         <!-- <div class="flex justify-center space-x-6 ">
                             <a href="#" class="text-gray-700 hover:text-blue-500 hover:scale-110 transform transition-all duration-300 text-2xl">
                                 <i class="fab fa-github"></i>
@@ -109,10 +102,10 @@
             </div>
         </section>
     </main>
-    <footer class="bg-gray-800 text-white p-4 w-full bottom-0">
+    <footer class="bg-gray-900 text-white p-4 w-full bottom-0">
         <div class="flex flex-col md:flex-row justify-between items-center">
             <div class="flex space-x-4 items-center">
-                <a href="github.com/ne-m" class="text-gray-300 hover:text-green-400 hover:scale-110 transform transition-all duration-300 text-2xl">
+                <a href="https://github.com/ne-m" class="text-gray-300 hover:text-green-400 hover:scale-110 transform transition-all duration-300 text-2xl">
                     <i class="fab fa-github"></i>
                 </a>
                 <a href="tiktok.com" class="text-gray-300 hover:text-green-400 hover:scale-110 transform transition-all duration-300 text-2xl">

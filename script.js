@@ -1,25 +1,20 @@
-const nav = document.querySelector("nav");
+const html = document.documentElement;
 
-function toggleDarkMode(){
-    nav.classList.toggle("dark")
-
-    if (localStorage.getItem("theme")=="light"){
-        localStorage.setItem("theme","dark")
-    } else {
-        localStorage.setItem("theme","light")
-    }
+function toggleDarkMode() {
+  html.classList.toggle("dark");
+  const theme = html.classList.contains("dark") ? "dark" : "light";
+  localStorage.setItem("theme", theme);
 }
 
+const savedTheme = localStorage.getItem("theme");
 
-if (localStorage.getItem("theme") == "light") {
-    nav.classList.remove("dark");
-    // document.body.classList.remove("dark-theme");
-} else if (localStorage.getItem("theme") == "dark") {
-    nav.classList.add("dark");
-    // document.body.classList.add("dark-theme");    
-} else{
-    localStorage.setItem("theme", "light");
+if (savedTheme === "dark") {
+  html.classList.add("dark");
+} else {
+  html.classList.remove("dark");
+  localStorage.setItem("theme", "light");
 }
+
 
 const mobileMenuButton = document.getElementById('mobile-menu-button');
 const mobileMenu = document.getElementById('mobile-menu');

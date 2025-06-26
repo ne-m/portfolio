@@ -1,11 +1,9 @@
 *{
     transition: all 0.3s linear;
 }
+
 nav{
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
-}
-nav.dark {
-    background-color: #21222A;
 }
 
 .toggler {
@@ -13,14 +11,14 @@ nav.dark {
     align-items: center;
 }
 
-.toggler p{
+/* .toggler p{
     font-size: 20px;
 }
 
 .toggler p {
     font-size: 0.625rem;
     font-weight: 600;
-}
+} */
 
 .toggler--slider {
     width: 25px;
@@ -34,9 +32,10 @@ nav.dark {
     align-items: center;
     border: 1px solid black;
     box-sizing: content-box;
+    /* transition:  0.3s ease-in-out; */
 }
 
-nav.dark .toggler--slider {
+html.dark .toggler--slider {
     border-color: white;
     background-color: #F5F5F5;
 }
@@ -53,21 +52,22 @@ nav.dark .toggler--slider {
     color: #2B283A;
 }
 
-nav.dark .toggler--light {
+html.dark .toggler--light {
     color: #918E9B;
 }
 
-nav.dark h1,nav.dark a, .toggler--dark {
+.toggler--dark {
     color: #D5D4D8;
 }
 
-nav.dark .toggler-dark {
+html.dark .toggler-dark {
     color: #FFFFFF;
 }
 
-nav.dark .toggler--slider {
+html.dark .toggler--slider {
     justify-content: flex-end;
 }
+
 
 @keyframes gradient-x {
   0% { background-position: 0% 50% }
