@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Me</title>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-  />
-  <link rel="stylesheet" href="styles.css">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="tailwind.config.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="scripts/tailwind.config.js"></script>
+    <script src="https://kit.fontawesome.com/bc33ec2e98.js" crossorigin="anonymous"></script>
 </head>
-<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white font-sans h-screen">
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-black font-sans h-screen">
 
   <nav class="fixed top-0 left-0 w-full z-50 bg-white dark:bg-gray-900 shadow-lg transition-colors duration-300" id="nav">
       <div class="max-w-6xl mx-auto px-4">
@@ -25,18 +24,18 @@
 
           <!-- Desktop Menu -->
           <div class="hidden md:flex items-center space-x-1">
-              <a href="index.html" class="nav-link py-1 px-2 text-xl font-semibold text-gray-900 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400">Home</a>
-              <a href="projects.html" class="nav-link py-1 px-2 text-xl font-semibold text-gray-900 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400">Projects</a>
-              <a href="about.html" class="nav-link py-1 px-2 text-xl font-semibold text-gray-900 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400">About</a>
-              <a href="contact.html" class="nav-link py-1 px-2 text-xl font-semibold text-gray-900 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400">Contact</a>
+              <a href="index.html" class="nav-link py-1 px-2 flex gap-2 items-center text-xl font-semibold text-gray-900 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400"> <i class="fas fa-house text-base"></i>  Home</a>
+              <a href="projects.html" class="nav-link py-1 px-2 flex gap-2 items-center text-xl font-semibold text-gray-900 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400"> <i class="fas fa-laptop-code text-base"></i> Projects</a>
+              <a href="about.html" class="nav-link py-1 px-2 flex gap-2 items-center text-xl font-semibold text-gray-900 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400"> <i class="fas fa-user text-base"></i>  About</a>
+              <a href="contact.html" class="nav-link py-1 px-2 flex gap-2 items-center text-xl font-semibold text-gray-900 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400"> <i class="fas fa-envelope text-base"></i>  Contact</a>
           </div>
 
           <div class="toggler hidden md:flex items-center space-x-1">
-              <p class="text-base text-lg toggler--light ">Light</p>
+              <p class="text-base text-lg toggler--light "><i class="far fa-sun"></i></p>
               <div class="toggler--slider" onclick="toggleDarkMode()">
               <div class="toggler--slider--circle"></div>
               </div>
-              <p class="text-base text-lg toggler--dark">Dark</p>
+              <p class="text-base text-lg toggler--dark"><i class="far fa-moon"></i></p>
           </div>
 
           <!-- Mobile menu button -->
@@ -52,30 +51,30 @@
 
       <!-- Mobile Menu -->
       <div id="mobile-menu" class="hidden bg-white dark:bg-gray-900 shadow-lg w-full transition-colors duration-300 md:hidden px-4 pb-4 space-y-2">
-          <a href="index.html" class="block px-3 py-2 text-base text-lg font-medium text-gray-900 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400">Home</a>
-          <a href="projects.html" class="block px-3 py-2 text-base text-lg font-medium text-gray-900 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400">Projects</a>
-          <a href="about.html" class="block px-3 py-2 text-base text-lg font-medium text-gray-900 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400">About</a>
-          <a href="contact.html" class="block px-3 py-2 text-base text-lg font-medium text-gray-900 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400">Contact</a>
+          <a href="index.html" class="block px-3 py-2 text-base text-lg font-medium text-gray-900 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 hover:translate-x-2 "> <i class="fas fa-house text-base"></i> Home</a>
+          <a href="projects.html" class="block px-3 py-2 text-base text-lg font-medium text-gray-900 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 hover:translate-x-2 "> <i class="fas fa-laptop-code text-base"></i> Projects</a>
+          <a href="about.html" class="block px-3 py-2 text-base text-lg font-medium text-gray-900 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 hover:translate-x-2 "> <i class="fas fa-user text-base"></i> About</a>
+          <a href="contact.html" class="block px-3 py-2 text-base text-lg font-medium text-gray-900 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 hover:translate-x-2 "> <i class="fas fa-envelope text-base"></i> Contact</a>
           <div class="toggler px-3 md:flex items-center space-x-1">
-              <p class="text-base text-lg toggler--light ">Light</p>
+              <p class="text-base text-lg toggler--light "><i class="far fa-sun"></i></p>
               <div class="toggler--slider" onclick="toggleDarkMode()">
               <div class="toggler--slider--circle"></div>
               </div>
-              <p class="text-base text-lg toggler--dark">Dark</p>
+              <p class="text-base text-lg toggler--dark"><i class="far fa-moon"></i></p>
           </div>
       </div>
   </nav>
 
     <main class="bg-gray-100 dark:bg-gray-800 pt-20">
-    <section class="py-16 px-8 max-w-xl mx-auto">
-        <h2 class="text-3xl font-bold mb-6 text-center text-gray-800 dark:text-white">Get in Touch</h2>
-        <form class="bg-white dark:bg-gray-100 shadow-lg rounded-lg p-8 space-y-4">
-            <input type="text" placeholder="Name" class="w-full p-3 border rounded" required>
-            <input type="email" placeholder="Email" class="w-full p-3 border rounded" required>
-            <textarea placeholder="Your message" class="w-full p-3 border rounded h-32" required></textarea>
-            <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700"> <i class="fa fa-paper-plane" aria-hidden="true"></i> Send</button>
-        </form>
-    </section>
+        <section class="py-16 px-8 max-w-xl mx-auto">
+            <h2 class="text-3xl font-bold mb-6 text-center text-gray-800 dark:text-white">Get in Touch</h2>
+            <form class="bg-white dark:bg-gray-100 shadow-lg rounded-lg p-8 space-y-4">
+                <input type="text" placeholder="Name" class="w-full p-3 border rounded" required>
+                <input type="email" placeholder="Email" class="w-full p-3 border rounded" required>
+                <textarea placeholder="Your message" class="w-full p-3 border rounded h-32" required></textarea>
+                <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700"> <i class="fa fa-paper-plane" aria-hidden="true"></i> Send</button>
+            </form>
+        </section>
     </main>
 
     <footer class="bg-gray-900 text-white p-4 w-full bottom-0">
@@ -104,6 +103,6 @@
   
 
   
-  <script src="script.js"></script>
+  <script src="scripts/script.js"></script>
 </body>
 </html>
